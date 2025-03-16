@@ -1,6 +1,9 @@
 package model;
 
+import model.enums.VehicleType;
+
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 public class ParkingFloor {
@@ -26,5 +29,9 @@ public class ParkingFloor {
 
     public void setParkingSpots(List<ParkingSpot> parkingSpots) {
         this.parkingSpots = parkingSpots;
+    }
+
+    public Optional<ParkingSpot> getParkingSpot(VehicleType vehicleType){
+        return parkingSpots.stream().filter(parkingSpot -> parkingSpot.getVehicleType().equals(vehicleType)).findFirst();
     }
 }

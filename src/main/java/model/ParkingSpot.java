@@ -10,6 +10,7 @@ public class ParkingSpot {
     private SpotStatus spotStatus;
     private VehicleType vehicleType;
 
+
     public String getSpotId() {
         return spotId;
     }
@@ -39,4 +40,5 @@ public class ParkingSpot {
         this.spotStatus = spotStatus;
         this.vehicleType = vehicleType;
     }
+
 }
